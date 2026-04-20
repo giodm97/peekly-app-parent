@@ -53,14 +53,18 @@ jobs:
 
             issue_body=$(cat "$issue_file")
 
-            claude --dangerously-skip-permissions -p "You are implementing a GitHub issue for the Peekly parent Android app (Kotlin/Jetpack Compose).
-The repo is at the current working directory.
-Existing design system: warm cream/orange palette defined in app/src/main/java/com/peekly/parent/ui/theme/Color.kt.
-Follow all conventions from existing files. Do not add comments unless necessary.
-Do NOT run git commands — the CI pipeline handles commits and pushes.
+            {
+              echo "You are implementing a GitHub issue for the Peekly parent Android app (Kotlin/Jetpack Compose)."
+              echo "The repo is at the current working directory."
+              echo "Existing design system: warm cream/orange palette defined in app/src/main/java/com/peekly/parent/ui/theme/Color.kt."
+              echo "Follow all conventions from existing files. Do not add comments unless necessary."
+              echo "Do NOT run git commands — the CI pipeline handles commits and pushes."
+              echo ""
+              echo "Issue to implement:"
+              echo "$issue_body"
+            } > /tmp/claude_prompt.txt
 
-Issue to implement:
-$issue_body"
+            claude --dangerously-skip-permissions -p "$(cat /tmp/claude_prompt.txt)"
 
             if git diff --cached --quiet && git diff --quiet; then
               echo "No changes produced — skipping $title"
