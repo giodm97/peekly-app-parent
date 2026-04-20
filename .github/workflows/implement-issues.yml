@@ -51,17 +51,14 @@ jobs:
             git checkout develop
             git checkout -b "$branch"
 
-            issue_body=$(cat "$issue_file")
-
             {
-              echo "You are implementing a GitHub issue for the Peekly parent Android app (Kotlin/Jetpack Compose)."
-              echo "The repo is at the current working directory."
-              echo "Existing design system: warm cream/orange palette defined in app/src/main/java/com/peekly/parent/ui/theme/Color.kt."
-              echo "Follow all conventions from existing files. Do not add comments unless necessary."
-              echo "Do NOT run git commands — the CI pipeline handles commits and pushes."
-              echo ""
-              echo "Issue to implement:"
-              echo "$issue_body"
+              printf 'You are implementing a GitHub issue for the Peekly parent Android app (Kotlin/Jetpack Compose).\n'
+              printf 'The repo is at the current working directory.\n'
+              printf 'Existing design system: warm cream/orange palette in app/src/main/java/com/peekly/parent/ui/theme/Color.kt.\n'
+              printf 'Follow all conventions from existing files. Do not add comments unless necessary.\n'
+              printf 'Do NOT run git commands -- the CI pipeline handles commits and pushes.\n\n'
+              printf 'Issue to implement:\n'
+              cat "$issue_file"
             } > /tmp/claude_prompt.txt
 
             claude --dangerously-skip-permissions -p "$(cat /tmp/claude_prompt.txt)"
@@ -74,20 +71,16 @@ jobs:
             fi
 
             git add -A
-            git commit -m "$title
-
-Co-Authored-By: Claude Sonnet 4.6 <noreply@anthropic.com>"
+            commit_msg=$(printf '%s\n\nCo-Authored-By: Claude Sonnet 4.6 <noreply@anthropic.com>' "$title")
+            git commit -m "$commit_msg"
 
             git push origin "$branch"
 
-            pr_url=$(gh pr create \
-              --base develop \
-              --title "$title" \
-              --body "$issue_body" \
-              --label enhancement)
+            cat "$issue_file" > /tmp/pr_body.txt
+            pr_url=$(gh pr create --base develop --title "$title" --body-file /tmp/pr_body.txt --label enhancement)
 
-            sed -i "s/^status: pending/status: done/" "$issue_file"
-            echo "pr: $pr_url" >> "$issue_file"
+            sed -i 's/^status: pending/status: done/' "$issue_file"
+            printf 'pr: %s\n' "$pr_url" >> "$issue_file"
 
             git add "$issue_file"
             git commit -m "Mark issue done: $title"
