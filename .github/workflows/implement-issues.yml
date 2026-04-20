@@ -1,0 +1,93 @@
+name: Autonomous Issue Implementation
+
+on:
+  schedule:
+    - cron: '0 3 * * *'
+  workflow_dispatch:
+
+jobs:
+  implement:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pull-requests: write
+
+    steps:
+      - name: Checkout develop
+        uses: actions/checkout@v4
+        with:
+          ref: develop
+          fetch-depth: 0
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install Claude Code CLI
+        run: npm install -g @anthropic-ai/claude-code
+
+      - name: Configure git
+        run: |
+          git config user.name "Peekly Bot"
+          git config user.email "dimaio.giuseppe@outlook.com"
+
+      - name: Implement pending issues
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          for issue_file in issues/*.md; do
+            status=$(grep '^status:' "$issue_file" | awk '{print $2}')
+            [ "$status" = "pending" ] || continue
+
+            title=$(grep '^title:' "$issue_file" | sed 's/^title:[[:space:]]*//' | tr -d '"')
+            slug=$(echo "$title" | tr '[:upper:]' '[:lower:]' | sed 's/[^a-z0-9]/-/g' | sed 's/-\+/-/g' | cut -c1-50 | sed 's/-$//')
+            branch="feat/$slug"
+
+            echo "=== Processing: $title ==="
+
+            git checkout develop
+            git checkout -b "$branch"
+
+            issue_body=$(cat "$issue_file")
+
+            claude --dangerously-skip-permissions -p "You are implementing a GitHub issue for the Peekly parent Android app (Kotlin/Jetpack Compose).
+The repo is at the current working directory.
+Existing design system: warm cream/orange palette defined in app/src/main/java/com/peekly/parent/ui/theme/Color.kt.
+Follow all conventions from existing files. Do not add comments unless necessary.
+Do NOT run git commands — the CI pipeline handles commits and pushes.
+
+Issue to implement:
+$issue_body"
+
+            if git diff --cached --quiet && git diff --quiet; then
+              echo "No changes produced — skipping $title"
+              git checkout develop
+              git branch -D "$branch"
+              continue
+            fi
+
+            git add -A
+            git commit -m "$title
+
+Co-Authored-By: Claude Sonnet 4.6 <noreply@anthropic.com>"
+
+            git push origin "$branch"
+
+            pr_url=$(gh pr create \
+              --base develop \
+              --title "$title" \
+              --body "$issue_body" \
+              --label enhancement)
+
+            sed -i "s/^status: pending/status: done/" "$issue_file"
+            echo "pr: $pr_url" >> "$issue_file"
+
+            git add "$issue_file"
+            git commit -m "Mark issue done: $title"
+            git push origin "$branch"
+
+            echo "PR opened: $pr_url"
+          done
