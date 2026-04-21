@@ -2,7 +2,7 @@
 repo: giodm97/peekly-app-parent
 title: "[Chunk B] Warm theme — ActivityScreen, SettingsScreen, Onboarding/Pairing/AddChild restyle"
 labels: enhancement
-status: hold
+status: pending
 ---
 
 ## Overview

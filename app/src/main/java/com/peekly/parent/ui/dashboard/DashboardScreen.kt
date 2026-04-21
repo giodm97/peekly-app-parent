@@ -265,7 +265,7 @@ private fun ChildSummaryCard(childName: String, digest: com.peekly.parent.data.D
 private fun SectionHeader(title: String) {
     Text(
         title,
-        modifier = Modifier.padding(horizontal = 22.dp, top = 20.dp, bottom = 10.dp),
+        modifier = Modifier.padding(start = 22.dp, end = 22.dp, top = 20.dp, bottom = 10.dp),
         style = MaterialTheme.typography.titleMedium,
         fontWeight = FontWeight.ExtraBold,
         color = WarmInk

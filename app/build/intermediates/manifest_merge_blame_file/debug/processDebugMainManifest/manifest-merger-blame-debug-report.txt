@@ -1,0 +1,339 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.peekly.parent"
+4    android:versionCode="1"
+5    android:versionName="1.0" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="26"
+9        android:targetSdkVersion="34" />
+10
+11    <uses-permission android:name="android.permission.INTERNET" />
+11-->C:\Users\g.dimaio\Documents\peekly-app-parent\app\src\main\AndroidManifest.xml:5:5-67
+11-->C:\Users\g.dimaio\Documents\peekly-app-parent\app\src\main\AndroidManifest.xml:5:22-64
+12    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+12-->C:\Users\g.dimaio\Documents\peekly-app-parent\app\src\main\AndroidManifest.xml:6:5-77
+12-->C:\Users\g.dimaio\Documents\peekly-app-parent\app\src\main\AndroidManifest.xml:6:22-74
+13    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+13-->[com.google.firebase:firebase-messaging:24.0.0] C:\Users\g.dimaio\.gradle\caches\transforms-4\f3198a26250b61d30fdd32b2486d80d6\transformed\firebase-messaging-24.0.0\AndroidManifest.xml:22:5-79
+13-->[com.google.firebase:firebase-messaging:24.0.0] C:\Users\g.dimaio\.gradle\caches\transforms-4\f3198a26250b61d30fdd32b2486d80d6\transformed\firebase-messaging-24.0.0\AndroidManifest.xml:22:22-76
+14    <uses-permission android:name="android.permission.WAKE_LOCK" /> <!-- Required by older versions of Google Play services to create IID tokens -->
+14-->[com.google.firebase:firebase-messaging:24.0.0] C:\Users\g.dimaio\.gradle\caches\transforms-4\f3198a26250b61d30fdd32b2486d80d6\transformed\firebase-messaging-24.0.0\AndroidManifest.xml:24:5-68
+14-->[com.google.firebase:firebase-messaging:24.0.0] C:\Users\g.dimaio\.gradle\caches\transforms-4\f3198a26250b61d30fdd32b2486d80d6\transformed\firebase-messaging-24.0.0\AndroidManifest.xml:24:22-65
+15    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+15-->[com.google.firebase:firebase-messaging:24.0.0] C:\Users\g.dimaio\.gradle\caches\transforms-4\f3198a26250b61d30fdd32b2486d80d6\transformed\firebase-messaging-24.0.0\AndroidManifest.xml:26:5-82
+15-->[com.google.firebase:firebase-messaging:24.0.0] C:\Users\g.dimaio\.gradle\caches\transforms-4\f3198a26250b61d30fdd32b2486d80d6\transformed\firebase-messaging-24.0.0\AndroidManifest.xml:26:22-79
+16
+17    <permission
+17-->[androidx.core:core:1.12.0] C:\Users\g.dimaio\.gradle\caches\transforms-4\8239f6838dda51105ec2f9ec04f8c3c8\transformed\core-1.12.0\AndroidManifest.xml:22:5-24:47
+18        android:name="com.peekly.parent.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+18-->[androidx.core:core:1.12.0] C:\Users\g.dimaio\.gradle\caches\transforms-4\8239f6838dda51105ec2f9ec04f8c3c8\transformed\core-1.12.0\AndroidManifest.xml:23:9-81
+19        android:protectionLevel="signature" />
+19-->[androidx.core:core:1.12.0] C:\Users\g.dimaio\.gradle\caches\transforms-4\8239f6838dda51105ec2f9ec04f8c3c8\transformed\core-1.12.0\AndroidManifest.xml:24:9-44
+20
+21    <uses-permission android:name="com.peekly.parent.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
+21-->[androidx.core:core:1.12.0] C:\Users\g.dimaio\.gradle\caches\transforms-4\8239f6838dda51105ec2f9ec04f8c3c8\transformed\core-1.12.0\AndroidManifest.xml:26:5-97
+21-->[androidx.core:core:1.12.0] C:\Users\g.dimaio\.gradle\caches\transforms-4\8239f6838dda51105ec2f9ec04f8c3c8\transformed\core-1.12.0\AndroidManifest.xml:26:22-94
+22
+23    <application
+23-->C:\Users\g.dimaio\Documents\peekly-app-parent\app\src\main\AndroidManifest.xml:8:5-40:19
+24        android:name="com.peekly.parent.PeeklyApplication"
+24-->C:\Users\g.dimaio\Documents\peekly-app-parent\app\src\main\AndroidManifest.xml:9:9-42
+25        android:allowBackup="true"
+25-->C:\Users\g.dimaio\Documents\peekly-app-parent\app\src\main\AndroidManifest.xml:10:9-35
+26        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+26-->[androidx.core:core:1.12.0] C:\Users\g.dimaio\.gradle\caches\transforms-4\8239f6838dda51105ec2f9ec04f8c3c8\transformed\core-1.12.0\AndroidManifest.xml:28:18-86
+27        android:dataExtractionRules="@xml/data_extraction_rules"
+27-->C:\Users\g.dimaio\Documents\peekly-app-parent\app\src\main\AndroidManifest.xml:11:9-65
+28        android:debuggable="true"
+29        android:extractNativeLibs="false"
+30        android:fullBackupContent="@xml/backup_rules"
+30-->C:\Users\g.dimaio\Documents\peekly-app-parent\app\src\main\AndroidManifest.xml:12:9-54
+31        android:icon="@mipmap/ic_launcher"
+31-->C:\Users\g.dimaio\Documents\peekly-app-parent\app\src\main\AndroidManifest.xml:13:9-43
+32        android:label="@string/app_name"
+32-->C:\Users\g.dimaio\Documents\peekly-app-parent\app\src\main\AndroidManifest.xml:14:9-41
+33        android:roundIcon="@mipmap/ic_launcher_round"
+33-->C:\Users\g.dimaio\Documents\peekly-app-parent\app\src\main\AndroidManifest.xml:15:9-54
+34        android:supportsRtl="true"
+34-->C:\Users\g.dimaio\Documents\peekly-app-parent\app\src\main\AndroidManifest.xml:16:9-35
+35        android:testOnly="true"
+36        android:theme="@style/Theme.PeeklyParent"
+36-->C:\Users\g.dimaio\Documents\peekly-app-parent\app\src\main\AndroidManifest.xml:17:9-50
+37        android:usesCleartextTraffic="true" >
+37-->C:\Users\g.dimaio\Documents\peekly-app-parent\app\src\main\AndroidManifest.xml:18:9-44
+38        <activity
+38-->C:\Users\g.dimaio\Documents\peekly-app-parent\app\src\main\AndroidManifest.xml:21:9-30:20
+39            android:name="com.peekly.parent.MainActivity"
+39-->C:\Users\g.dimaio\Documents\peekly-app-parent\app\src\main\AndroidManifest.xml:22:13-41
+40            android:exported="true"
+40-->C:\Users\g.dimaio\Documents\peekly-app-parent\app\src\main\AndroidManifest.xml:23:13-36
+41            android:label="@string/app_name"
+41-->C:\Users\g.dimaio\Documents\peekly-app-parent\app\src\main\AndroidManifest.xml:24:13-45
+42            android:theme="@style/Theme.PeeklyParent" >
+42-->C:\Users\g.dimaio\Documents\peekly-app-parent\app\src\main\AndroidManifest.xml:25:13-54
+43            <intent-filter>
+43-->C:\Users\g.dimaio\Documents\peekly-app-parent\app\src\main\AndroidManifest.xml:26:13-29:29
+44                <action android:name="android.intent.action.MAIN" />
+44-->C:\Users\g.dimaio\Documents\peekly-app-parent\app\src\main\AndroidManifest.xml:27:17-69
+44-->C:\Users\g.dimaio\Documents\peekly-app-parent\app\src\main\AndroidManifest.xml:27:25-66
+45
+46                <category android:name="android.intent.category.LAUNCHER" />
+46-->C:\Users\g.dimaio\Documents\peekly-app-parent\app\src\main\AndroidManifest.xml:28:17-77
+46-->C:\Users\g.dimaio\Documents\peekly-app-parent\app\src\main\AndroidManifest.xml:28:27-74
+47            </intent-filter>
+48        </activity>
+49
+50        <service
+50-->C:\Users\g.dimaio\Documents\peekly-app-parent\app\src\main\AndroidManifest.xml:32:9-38:19
+51            android:name="com.peekly.parent.service.PeeklyFirebaseService"
+51-->C:\Users\g.dimaio\Documents\peekly-app-parent\app\src\main\AndroidManifest.xml:33:13-58
+52            android:exported="false" >
+52-->C:\Users\g.dimaio\Documents\peekly-app-parent\app\src\main\AndroidManifest.xml:34:13-37
+53            <intent-filter>
+53-->C:\Users\g.dimaio\Documents\peekly-app-parent\app\src\main\AndroidManifest.xml:35:13-37:29
+54                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+54-->C:\Users\g.dimaio\Documents\peekly-app-parent\app\src\main\AndroidManifest.xml:36:17-78
+54-->C:\Users\g.dimaio\Documents\peekly-app-parent\app\src\main\AndroidManifest.xml:36:25-75
+55            </intent-filter>
+56        </service>
+57        <service
+57-->[com.google.firebase:firebase-messaging-ktx:24.0.0] C:\Users\g.dimaio\.gradle\caches\transforms-4\5e5cc239f7da89d47857b03853ff0785\transformed\firebase-messaging-ktx-24.0.0\AndroidManifest.xml:23:9-29:19
+58            android:name="com.google.firebase.components.ComponentDiscoveryService"
+58-->[com.google.firebase:firebase-messaging-ktx:24.0.0] C:\Users\g.dimaio\.gradle\caches\transforms-4\5e5cc239f7da89d47857b03853ff0785\transformed\firebase-messaging-ktx-24.0.0\AndroidManifest.xml:24:13-84
+59            android:directBootAware="true"
+59-->[com.google.firebase:firebase-common:21.0.0] C:\Users\g.dimaio\.gradle\caches\transforms-4\2d8a545d12c6f0a4822d05091765bf98\transformed\firebase-common-21.0.0\AndroidManifest.xml:32:13-43
+60            android:exported="false" >
+60-->[com.google.firebase:firebase-messaging-ktx:24.0.0] C:\Users\g.dimaio\.gradle\caches\transforms-4\5e5cc239f7da89d47857b03853ff0785\transformed\firebase-messaging-ktx-24.0.0\AndroidManifest.xml:25:13-37
+61            <meta-data
+61-->[com.google.firebase:firebase-messaging-ktx:24.0.0] C:\Users\g.dimaio\.gradle\caches\transforms-4\5e5cc239f7da89d47857b03853ff0785\transformed\firebase-messaging-ktx-24.0.0\AndroidManifest.xml:26:13-28:85
+62                android:name="com.google.firebase.components:com.google.firebase.messaging.ktx.FirebaseMessagingLegacyRegistrar"
+62-->[com.google.firebase:firebase-messaging-ktx:24.0.0] C:\Users\g.dimaio\.gradle\caches\transforms-4\5e5cc239f7da89d47857b03853ff0785\transformed\firebase-messaging-ktx-24.0.0\AndroidManifest.xml:27:17-129
+63                android:value="com.google.firebase.components.ComponentRegistrar" />
+63-->[com.google.firebase:firebase-messaging-ktx:24.0.0] C:\Users\g.dimaio\.gradle\caches\transforms-4\5e5cc239f7da89d47857b03853ff0785\transformed\firebase-messaging-ktx-24.0.0\AndroidManifest.xml:28:17-82
+64            <meta-data
+64-->[com.google.firebase:firebase-messaging:24.0.0] C:\Users\g.dimaio\.gradle\caches\transforms-4\f3198a26250b61d30fdd32b2486d80d6\transformed\firebase-messaging-24.0.0\AndroidManifest.xml:57:13-59:85
+65                android:name="com.google.firebase.components:com.google.firebase.messaging.FirebaseMessagingKtxRegistrar"
+65-->[com.google.firebase:firebase-messaging:24.0.0] C:\Users\g.dimaio\.gradle\caches\transforms-4\f3198a26250b61d30fdd32b2486d80d6\transformed\firebase-messaging-24.0.0\AndroidManifest.xml:58:17-122
+66                android:value="com.google.firebase.components.ComponentRegistrar" />
+66-->[com.google.firebase:firebase-messaging:24.0.0] C:\Users\g.dimaio\.gradle\caches\transforms-4\f3198a26250b61d30fdd32b2486d80d6\transformed\firebase-messaging-24.0.0\AndroidManifest.xml:59:17-82
+67            <meta-data
+67-->[com.google.firebase:firebase-messaging:24.0.0] C:\Users\g.dimaio\.gradle\caches\transforms-4\f3198a26250b61d30fdd32b2486d80d6\transformed\firebase-messaging-24.0.0\AndroidManifest.xml:60:13-62:85
+68                android:name="com.google.firebase.components:com.google.firebase.messaging.FirebaseMessagingRegistrar"
+68-->[com.google.firebase:firebase-messaging:24.0.0] C:\Users\g.dimaio\.gradle\caches\transforms-4\f3198a26250b61d30fdd32b2486d80d6\transformed\firebase-messaging-24.0.0\AndroidManifest.xml:61:17-119
+69                android:value="com.google.firebase.components.ComponentRegistrar" />
+69-->[com.google.firebase:firebase-messaging:24.0.0] C:\Users\g.dimaio\.gradle\caches\transforms-4\f3198a26250b61d30fdd32b2486d80d6\transformed\firebase-messaging-24.0.0\AndroidManifest.xml:62:17-82
+70            <meta-data
+70-->[com.google.firebase:firebase-installations:18.0.0] C:\Users\g.dimaio\.gradle\caches\transforms-4\77e068ef0dd380b6ae789eaa2b3156d1\transformed\firebase-installations-18.0.0\AndroidManifest.xml:15:13-17:85
+71                android:name="com.google.firebase.components:com.google.firebase.installations.FirebaseInstallationsKtxRegistrar"
+71-->[com.google.firebase:firebase-installations:18.0.0] C:\Users\g.dimaio\.gradle\caches\transforms-4\77e068ef0dd380b6ae789eaa2b3156d1\transformed\firebase-installations-18.0.0\AndroidManifest.xml:16:17-130
+72                android:value="com.google.firebase.components.ComponentRegistrar" />
+72-->[com.google.firebase:firebase-installations:18.0.0] C:\Users\g.dimaio\.gradle\caches\transforms-4\77e068ef0dd380b6ae789eaa2b3156d1\transformed\firebase-installations-18.0.0\AndroidManifest.xml:17:17-82
+73            <meta-data
+73-->[com.google.firebase:firebase-installations:18.0.0] C:\Users\g.dimaio\.gradle\caches\transforms-4\77e068ef0dd380b6ae789eaa2b3156d1\transformed\firebase-installations-18.0.0\AndroidManifest.xml:18:13-20:85
+74                android:name="com.google.firebase.components:com.google.firebase.installations.FirebaseInstallationsRegistrar"
+74-->[com.google.firebase:firebase-installations:18.0.0] C:\Users\g.dimaio\.gradle\caches\transforms-4\77e068ef0dd380b6ae789eaa2b3156d1\transformed\firebase-installations-18.0.0\AndroidManifest.xml:19:17-127
+75                android:value="com.google.firebase.components.ComponentRegistrar" />
+75-->[com.google.firebase:firebase-installations:18.0.0] C:\Users\g.dimaio\.gradle\caches\transforms-4\77e068ef0dd380b6ae789eaa2b3156d1\transformed\firebase-installations-18.0.0\AndroidManifest.xml:20:17-82
+76            <meta-data
+76-->[com.google.firebase:firebase-common-ktx:21.0.0] C:\Users\g.dimaio\.gradle\caches\transforms-4\e834cda4686a0d9d177c4797d2f2bb21\transformed\firebase-common-ktx-21.0.0\AndroidManifest.xml:12:13-14:85
+77                android:name="com.google.firebase.components:com.google.firebase.ktx.FirebaseCommonLegacyRegistrar"
+77-->[com.google.firebase:firebase-common-ktx:21.0.0] C:\Users\g.dimaio\.gradle\caches\transforms-4\e834cda4686a0d9d177c4797d2f2bb21\transformed\firebase-common-ktx-21.0.0\AndroidManifest.xml:13:17-116
+78                android:value="com.google.firebase.components.ComponentRegistrar" />
+78-->[com.google.firebase:firebase-common-ktx:21.0.0] C:\Users\g.dimaio\.gradle\caches\transforms-4\e834cda4686a0d9d177c4797d2f2bb21\transformed\firebase-common-ktx-21.0.0\AndroidManifest.xml:14:17-82
+79            <meta-data
+79-->[com.google.firebase:firebase-common:21.0.0] C:\Users\g.dimaio\.gradle\caches\transforms-4\2d8a545d12c6f0a4822d05091765bf98\transformed\firebase-common-21.0.0\AndroidManifest.xml:35:13-37:85
+80                android:name="com.google.firebase.components:com.google.firebase.FirebaseCommonKtxRegistrar"
+80-->[com.google.firebase:firebase-common:21.0.0] C:\Users\g.dimaio\.gradle\caches\transforms-4\2d8a545d12c6f0a4822d05091765bf98\transformed\firebase-common-21.0.0\AndroidManifest.xml:36:17-109
+81                android:value="com.google.firebase.components.ComponentRegistrar" />
+81-->[com.google.firebase:firebase-common:21.0.0] C:\Users\g.dimaio\.gradle\caches\transforms-4\2d8a545d12c6f0a4822d05091765bf98\transformed\firebase-common-21.0.0\AndroidManifest.xml:37:17-82
+82            <meta-data
+82-->[com.google.firebase:firebase-datatransport:18.2.0] C:\Users\g.dimaio\.gradle\caches\transforms-4\143f5a7fda96a8087d4c51659281ab75\transformed\firebase-datatransport-18.2.0\AndroidManifest.xml:25:13-27:85
+83                android:name="com.google.firebase.components:com.google.firebase.datatransport.TransportRegistrar"
+83-->[com.google.firebase:firebase-datatransport:18.2.0] C:\Users\g.dimaio\.gradle\caches\transforms-4\143f5a7fda96a8087d4c51659281ab75\transformed\firebase-datatransport-18.2.0\AndroidManifest.xml:26:17-115
+84                android:value="com.google.firebase.components.ComponentRegistrar" />
+84-->[com.google.firebase:firebase-datatransport:18.2.0] C:\Users\g.dimaio\.gradle\caches\transforms-4\143f5a7fda96a8087d4c51659281ab75\transformed\firebase-datatransport-18.2.0\AndroidManifest.xml:27:17-82
+85        </service>
+86
+87        <activity
+87-->[androidx.compose.ui:ui-tooling-android:1.6.6] C:\Users\g.dimaio\.gradle\caches\transforms-4\4e7a59af74477f9dd86c26cf993978b0\transformed\ui-tooling-release\AndroidManifest.xml:23:9-25:39
+88            android:name="androidx.compose.ui.tooling.PreviewActivity"
+88-->[androidx.compose.ui:ui-tooling-android:1.6.6] C:\Users\g.dimaio\.gradle\caches\transforms-4\4e7a59af74477f9dd86c26cf993978b0\transformed\ui-tooling-release\AndroidManifest.xml:24:13-71
+89            android:exported="true" />
+89-->[androidx.compose.ui:ui-tooling-android:1.6.6] C:\Users\g.dimaio\.gradle\caches\transforms-4\4e7a59af74477f9dd86c26cf993978b0\transformed\ui-tooling-release\AndroidManifest.xml:25:13-36
+90
+91        <receiver
+91-->[com.google.firebase:firebase-messaging:24.0.0] C:\Users\g.dimaio\.gradle\caches\transforms-4\f3198a26250b61d30fdd32b2486d80d6\transformed\firebase-messaging-24.0.0\AndroidManifest.xml:29:9-40:20
+92            android:name="com.google.firebase.iid.FirebaseInstanceIdReceiver"
+92-->[com.google.firebase:firebase-messaging:24.0.0] C:\Users\g.dimaio\.gradle\caches\transforms-4\f3198a26250b61d30fdd32b2486d80d6\transformed\firebase-messaging-24.0.0\AndroidManifest.xml:30:13-78
+93            android:exported="true"
+93-->[com.google.firebase:firebase-messaging:24.0.0] C:\Users\g.dimaio\.gradle\caches\transforms-4\f3198a26250b61d30fdd32b2486d80d6\transformed\firebase-messaging-24.0.0\AndroidManifest.xml:31:13-36
+94            android:permission="com.google.android.c2dm.permission.SEND" >
+94-->[com.google.firebase:firebase-messaging:24.0.0] C:\Users\g.dimaio\.gradle\caches\transforms-4\f3198a26250b61d30fdd32b2486d80d6\transformed\firebase-messaging-24.0.0\AndroidManifest.xml:32:13-73
+95            <intent-filter>
+95-->[com.google.firebase:firebase-messaging:24.0.0] C:\Users\g.dimaio\.gradle\caches\transforms-4\f3198a26250b61d30fdd32b2486d80d6\transformed\firebase-messaging-24.0.0\AndroidManifest.xml:33:13-35:29
+96                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+96-->[com.google.firebase:firebase-messaging:24.0.0] C:\Users\g.dimaio\.gradle\caches\transforms-4\f3198a26250b61d30fdd32b2486d80d6\transformed\firebase-messaging-24.0.0\AndroidManifest.xml:34:17-81
+96-->[com.google.firebase:firebase-messaging:24.0.0] C:\Users\g.dimaio\.gradle\caches\transforms-4\f3198a26250b61d30fdd32b2486d80d6\transformed\firebase-messaging-24.0.0\AndroidManifest.xml:34:25-78
+97            </intent-filter>
+98
+99            <meta-data
+99-->[com.google.firebase:firebase-messaging:24.0.0] C:\Users\g.dimaio\.gradle\caches\transforms-4\f3198a26250b61d30fdd32b2486d80d6\transformed\firebase-messaging-24.0.0\AndroidManifest.xml:37:13-39:40
+100                android:name="com.google.android.gms.cloudmessaging.FINISHED_AFTER_HANDLED"
+100-->[com.google.firebase:firebase-messaging:24.0.0] C:\Users\g.dimaio\.gradle\caches\transforms-4\f3198a26250b61d30fdd32b2486d80d6\transformed\firebase-messaging-24.0.0\AndroidManifest.xml:38:17-92
+101                android:value="true" />
+101-->[com.google.firebase:firebase-messaging:24.0.0] C:\Users\g.dimaio\.gradle\caches\transforms-4\f3198a26250b61d30fdd32b2486d80d6\transformed\firebase-messaging-24.0.0\AndroidManifest.xml:39:17-37
+102        </receiver>
+103        <!--
+104             FirebaseMessagingService performs security checks at runtime,
+105             but set to not exported to explicitly avoid allowing another app to call it.
+106        -->
+107        <service
+107-->[com.google.firebase:firebase-messaging:24.0.0] C:\Users\g.dimaio\.gradle\caches\transforms-4\f3198a26250b61d30fdd32b2486d80d6\transformed\firebase-messaging-24.0.0\AndroidManifest.xml:46:9-53:19
+108            android:name="com.google.firebase.messaging.FirebaseMessagingService"
+108-->[com.google.firebase:firebase-messaging:24.0.0] C:\Users\g.dimaio\.gradle\caches\transforms-4\f3198a26250b61d30fdd32b2486d80d6\transformed\firebase-messaging-24.0.0\AndroidManifest.xml:47:13-82
+109            android:directBootAware="true"
+109-->[com.google.firebase:firebase-messaging:24.0.0] C:\Users\g.dimaio\.gradle\caches\transforms-4\f3198a26250b61d30fdd32b2486d80d6\transformed\firebase-messaging-24.0.0\AndroidManifest.xml:48:13-43
+110            android:exported="false" >
+110-->[com.google.firebase:firebase-messaging:24.0.0] C:\Users\g.dimaio\.gradle\caches\transforms-4\f3198a26250b61d30fdd32b2486d80d6\transformed\firebase-messaging-24.0.0\AndroidManifest.xml:49:13-37
+111            <intent-filter android:priority="-500" >
+111-->C:\Users\g.dimaio\Documents\peekly-app-parent\app\src\main\AndroidManifest.xml:35:13-37:29
+112                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+112-->C:\Users\g.dimaio\Documents\peekly-app-parent\app\src\main\AndroidManifest.xml:36:17-78
+112-->C:\Users\g.dimaio\Documents\peekly-app-parent\app\src\main\AndroidManifest.xml:36:25-75
+113            </intent-filter>
+114        </service>
+115
+116        <activity
+116-->[com.google.android.gms:play-services-base:18.0.1] C:\Users\g.dimaio\.gradle\caches\transforms-4\5f653d94dd36f8b04d76bf8bfe5efd12\transformed\play-services-base-18.0.1\AndroidManifest.xml:20:9-22:45
+117            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+117-->[com.google.android.gms:play-services-base:18.0.1] C:\Users\g.dimaio\.gradle\caches\transforms-4\5f653d94dd36f8b04d76bf8bfe5efd12\transformed\play-services-base-18.0.1\AndroidManifest.xml:20:19-85
+118            android:exported="false"
+118-->[com.google.android.gms:play-services-base:18.0.1] C:\Users\g.dimaio\.gradle\caches\transforms-4\5f653d94dd36f8b04d76bf8bfe5efd12\transformed\play-services-base-18.0.1\AndroidManifest.xml:22:19-43
+119            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+119-->[com.google.android.gms:play-services-base:18.0.1] C:\Users\g.dimaio\.gradle\caches\transforms-4\5f653d94dd36f8b04d76bf8bfe5efd12\transformed\play-services-base-18.0.1\AndroidManifest.xml:21:19-78
+120
+121        <provider
+121-->[com.google.firebase:firebase-common:21.0.0] C:\Users\g.dimaio\.gradle\caches\transforms-4\2d8a545d12c6f0a4822d05091765bf98\transformed\firebase-common-21.0.0\AndroidManifest.xml:23:9-28:39
+122            android:name="com.google.firebase.provider.FirebaseInitProvider"
+122-->[com.google.firebase:firebase-common:21.0.0] C:\Users\g.dimaio\.gradle\caches\transforms-4\2d8a545d12c6f0a4822d05091765bf98\transformed\firebase-common-21.0.0\AndroidManifest.xml:24:13-77
+123            android:authorities="com.peekly.parent.firebaseinitprovider"
+123-->[com.google.firebase:firebase-common:21.0.0] C:\Users\g.dimaio\.gradle\caches\transforms-4\2d8a545d12c6f0a4822d05091765bf98\transformed\firebase-common-21.0.0\AndroidManifest.xml:25:13-72
+124            android:directBootAware="true"
+124-->[com.google.firebase:firebase-common:21.0.0] C:\Users\g.dimaio\.gradle\caches\transforms-4\2d8a545d12c6f0a4822d05091765bf98\transformed\firebase-common-21.0.0\AndroidManifest.xml:26:13-43
+125            android:exported="false"
+125-->[com.google.firebase:firebase-common:21.0.0] C:\Users\g.dimaio\.gradle\caches\transforms-4\2d8a545d12c6f0a4822d05091765bf98\transformed\firebase-common-21.0.0\AndroidManifest.xml:27:13-37
+126            android:initOrder="100" />
+126-->[com.google.firebase:firebase-common:21.0.0] C:\Users\g.dimaio\.gradle\caches\transforms-4\2d8a545d12c6f0a4822d05091765bf98\transformed\firebase-common-21.0.0\AndroidManifest.xml:28:13-36
+127        <provider
+127-->[androidx.emoji2:emoji2:1.3.0] C:\Users\g.dimaio\.gradle\caches\transforms-4\f544c408797ad0871fb0528c08913197\transformed\emoji2-1.3.0\AndroidManifest.xml:24:9-32:20
+128            android:name="androidx.startup.InitializationProvider"
+128-->[androidx.emoji2:emoji2:1.3.0] C:\Users\g.dimaio\.gradle\caches\transforms-4\f544c408797ad0871fb0528c08913197\transformed\emoji2-1.3.0\AndroidManifest.xml:25:13-67
+129            android:authorities="com.peekly.parent.androidx-startup"
+129-->[androidx.emoji2:emoji2:1.3.0] C:\Users\g.dimaio\.gradle\caches\transforms-4\f544c408797ad0871fb0528c08913197\transformed\emoji2-1.3.0\AndroidManifest.xml:26:13-68
+130            android:exported="false" >
+130-->[androidx.emoji2:emoji2:1.3.0] C:\Users\g.dimaio\.gradle\caches\transforms-4\f544c408797ad0871fb0528c08913197\transformed\emoji2-1.3.0\AndroidManifest.xml:27:13-37
+131            <meta-data
+131-->[androidx.emoji2:emoji2:1.3.0] C:\Users\g.dimaio\.gradle\caches\transforms-4\f544c408797ad0871fb0528c08913197\transformed\emoji2-1.3.0\AndroidManifest.xml:29:13-31:52
+132                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+132-->[androidx.emoji2:emoji2:1.3.0] C:\Users\g.dimaio\.gradle\caches\transforms-4\f544c408797ad0871fb0528c08913197\transformed\emoji2-1.3.0\AndroidManifest.xml:30:17-75
+133                android:value="androidx.startup" />
+133-->[androidx.emoji2:emoji2:1.3.0] C:\Users\g.dimaio\.gradle\caches\transforms-4\f544c408797ad0871fb0528c08913197\transformed\emoji2-1.3.0\AndroidManifest.xml:31:17-49
+134            <meta-data
+134-->[androidx.lifecycle:lifecycle-process:2.8.0] C:\Users\g.dimaio\.gradle\caches\transforms-4\a64495ace6d707273031dbcb2cbab952\transformed\lifecycle-process-2.8.0\AndroidManifest.xml:29:13-31:52
+135                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+135-->[androidx.lifecycle:lifecycle-process:2.8.0] C:\Users\g.dimaio\.gradle\caches\transforms-4\a64495ace6d707273031dbcb2cbab952\transformed\lifecycle-process-2.8.0\AndroidManifest.xml:30:17-78
+136                android:value="androidx.startup" />
+136-->[androidx.lifecycle:lifecycle-process:2.8.0] C:\Users\g.dimaio\.gradle\caches\transforms-4\a64495ace6d707273031dbcb2cbab952\transformed\lifecycle-process-2.8.0\AndroidManifest.xml:31:17-49
+137            <meta-data
+137-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\g.dimaio\.gradle\caches\transforms-4\10138cc43bd09e69c833af943a222d83\transformed\profileinstaller-1.3.1\AndroidManifest.xml:29:13-31:52
+138                android:name="androidx.profileinstaller.ProfileInstallerInitializer"
+138-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\g.dimaio\.gradle\caches\transforms-4\10138cc43bd09e69c833af943a222d83\transformed\profileinstaller-1.3.1\AndroidManifest.xml:30:17-85
+139                android:value="androidx.startup" />
+139-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\g.dimaio\.gradle\caches\transforms-4\10138cc43bd09e69c833af943a222d83\transformed\profileinstaller-1.3.1\AndroidManifest.xml:31:17-49
+140        </provider>
+141
+142        <meta-data
+142-->[com.google.android.gms:play-services-basement:18.3.0] C:\Users\g.dimaio\.gradle\caches\transforms-4\284bd70a4bf0c90941ce6f2fc6fc7344\transformed\play-services-basement-18.3.0\AndroidManifest.xml:21:9-23:69
+143            android:name="com.google.android.gms.version"
+143-->[com.google.android.gms:play-services-basement:18.3.0] C:\Users\g.dimaio\.gradle\caches\transforms-4\284bd70a4bf0c90941ce6f2fc6fc7344\transformed\play-services-basement-18.3.0\AndroidManifest.xml:22:13-58
+144            android:value="@integer/google_play_services_version" />
+144-->[com.google.android.gms:play-services-basement:18.3.0] C:\Users\g.dimaio\.gradle\caches\transforms-4\284bd70a4bf0c90941ce6f2fc6fc7344\transformed\play-services-basement-18.3.0\AndroidManifest.xml:23:13-66
+145
+146        <activity
+146-->[androidx.compose.ui:ui-test-manifest:1.6.6] C:\Users\g.dimaio\.gradle\caches\transforms-4\07d48e3d2b3801299ee1a8a4a52d51eb\transformed\ui-test-manifest-1.6.6\AndroidManifest.xml:23:9-25:39
+147            android:name="androidx.activity.ComponentActivity"
+147-->[androidx.compose.ui:ui-test-manifest:1.6.6] C:\Users\g.dimaio\.gradle\caches\transforms-4\07d48e3d2b3801299ee1a8a4a52d51eb\transformed\ui-test-manifest-1.6.6\AndroidManifest.xml:24:13-63
+148            android:exported="true" />
+148-->[androidx.compose.ui:ui-test-manifest:1.6.6] C:\Users\g.dimaio\.gradle\caches\transforms-4\07d48e3d2b3801299ee1a8a4a52d51eb\transformed\ui-test-manifest-1.6.6\AndroidManifest.xml:25:13-36
+149
+150        <receiver
+150-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\g.dimaio\.gradle\caches\transforms-4\10138cc43bd09e69c833af943a222d83\transformed\profileinstaller-1.3.1\AndroidManifest.xml:34:9-52:20
+151            android:name="androidx.profileinstaller.ProfileInstallReceiver"
+151-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\g.dimaio\.gradle\caches\transforms-4\10138cc43bd09e69c833af943a222d83\transformed\profileinstaller-1.3.1\AndroidManifest.xml:35:13-76
+152            android:directBootAware="false"
+152-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\g.dimaio\.gradle\caches\transforms-4\10138cc43bd09e69c833af943a222d83\transformed\profileinstaller-1.3.1\AndroidManifest.xml:36:13-44
+153            android:enabled="true"
+153-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\g.dimaio\.gradle\caches\transforms-4\10138cc43bd09e69c833af943a222d83\transformed\profileinstaller-1.3.1\AndroidManifest.xml:37:13-35
+154            android:exported="true"
+154-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\g.dimaio\.gradle\caches\transforms-4\10138cc43bd09e69c833af943a222d83\transformed\profileinstaller-1.3.1\AndroidManifest.xml:38:13-36
+155            android:permission="android.permission.DUMP" >
+155-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\g.dimaio\.gradle\caches\transforms-4\10138cc43bd09e69c833af943a222d83\transformed\profileinstaller-1.3.1\AndroidManifest.xml:39:13-57
+156            <intent-filter>
+156-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\g.dimaio\.gradle\caches\transforms-4\10138cc43bd09e69c833af943a222d83\transformed\profileinstaller-1.3.1\AndroidManifest.xml:40:13-42:29
+157                <action android:name="androidx.profileinstaller.action.INSTALL_PROFILE" />
+157-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\g.dimaio\.gradle\caches\transforms-4\10138cc43bd09e69c833af943a222d83\transformed\profileinstaller-1.3.1\AndroidManifest.xml:41:17-91
+157-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\g.dimaio\.gradle\caches\transforms-4\10138cc43bd09e69c833af943a222d83\transformed\profileinstaller-1.3.1\AndroidManifest.xml:41:25-88
+158            </intent-filter>
+159            <intent-filter>
+159-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\g.dimaio\.gradle\caches\transforms-4\10138cc43bd09e69c833af943a222d83\transformed\profileinstaller-1.3.1\AndroidManifest.xml:43:13-45:29
+160                <action android:name="androidx.profileinstaller.action.SKIP_FILE" />
+160-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\g.dimaio\.gradle\caches\transforms-4\10138cc43bd09e69c833af943a222d83\transformed\profileinstaller-1.3.1\AndroidManifest.xml:44:17-85
+160-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\g.dimaio\.gradle\caches\transforms-4\10138cc43bd09e69c833af943a222d83\transformed\profileinstaller-1.3.1\AndroidManifest.xml:44:25-82
+161            </intent-filter>
+162            <intent-filter>
+162-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\g.dimaio\.gradle\caches\transforms-4\10138cc43bd09e69c833af943a222d83\transformed\profileinstaller-1.3.1\AndroidManifest.xml:46:13-48:29
+163                <action android:name="androidx.profileinstaller.action.SAVE_PROFILE" />
+163-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\g.dimaio\.gradle\caches\transforms-4\10138cc43bd09e69c833af943a222d83\transformed\profileinstaller-1.3.1\AndroidManifest.xml:47:17-88
+163-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\g.dimaio\.gradle\caches\transforms-4\10138cc43bd09e69c833af943a222d83\transformed\profileinstaller-1.3.1\AndroidManifest.xml:47:25-85
+164            </intent-filter>
+165            <intent-filter>
+165-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\g.dimaio\.gradle\caches\transforms-4\10138cc43bd09e69c833af943a222d83\transformed\profileinstaller-1.3.1\AndroidManifest.xml:49:13-51:29
+166                <action android:name="androidx.profileinstaller.action.BENCHMARK_OPERATION" />
+166-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\g.dimaio\.gradle\caches\transforms-4\10138cc43bd09e69c833af943a222d83\transformed\profileinstaller-1.3.1\AndroidManifest.xml:50:17-95
+166-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\g.dimaio\.gradle\caches\transforms-4\10138cc43bd09e69c833af943a222d83\transformed\profileinstaller-1.3.1\AndroidManifest.xml:50:25-92
+167            </intent-filter>
+168        </receiver>
+169
+170        <service
+170-->[com.google.android.datatransport:transport-backend-cct:3.1.9] C:\Users\g.dimaio\.gradle\caches\transforms-4\b9e8e049261e58190a4f59c45787daa5\transformed\transport-backend-cct-3.1.9\AndroidManifest.xml:28:9-34:19
+171            android:name="com.google.android.datatransport.runtime.backends.TransportBackendDiscovery"
+171-->[com.google.android.datatransport:transport-backend-cct:3.1.9] C:\Users\g.dimaio\.gradle\caches\transforms-4\b9e8e049261e58190a4f59c45787daa5\transformed\transport-backend-cct-3.1.9\AndroidManifest.xml:29:13-103
+172            android:exported="false" >
+172-->[com.google.android.datatransport:transport-backend-cct:3.1.9] C:\Users\g.dimaio\.gradle\caches\transforms-4\b9e8e049261e58190a4f59c45787daa5\transformed\transport-backend-cct-3.1.9\AndroidManifest.xml:30:13-37
+173            <meta-data
+173-->[com.google.android.datatransport:transport-backend-cct:3.1.9] C:\Users\g.dimaio\.gradle\caches\transforms-4\b9e8e049261e58190a4f59c45787daa5\transformed\transport-backend-cct-3.1.9\AndroidManifest.xml:31:13-33:39
+174                android:name="backend:com.google.android.datatransport.cct.CctBackendFactory"
+174-->[com.google.android.datatransport:transport-backend-cct:3.1.9] C:\Users\g.dimaio\.gradle\caches\transforms-4\b9e8e049261e58190a4f59c45787daa5\transformed\transport-backend-cct-3.1.9\AndroidManifest.xml:32:17-94
+175                android:value="cct" />
+175-->[com.google.android.datatransport:transport-backend-cct:3.1.9] C:\Users\g.dimaio\.gradle\caches\transforms-4\b9e8e049261e58190a4f59c45787daa5\transformed\transport-backend-cct-3.1.9\AndroidManifest.xml:33:17-36
+176        </service>
+177        <service
+177-->[com.google.android.datatransport:transport-runtime:3.1.9] C:\Users\g.dimaio\.gradle\caches\transforms-4\7cd4217b9eda4553df05677af7d232ee\transformed\transport-runtime-3.1.9\AndroidManifest.xml:26:9-30:19
+178            android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.JobInfoSchedulerService"
+178-->[com.google.android.datatransport:transport-runtime:3.1.9] C:\Users\g.dimaio\.gradle\caches\transforms-4\7cd4217b9eda4553df05677af7d232ee\transformed\transport-runtime-3.1.9\AndroidManifest.xml:27:13-117
+179            android:exported="false"
+179-->[com.google.android.datatransport:transport-runtime:3.1.9] C:\Users\g.dimaio\.gradle\caches\transforms-4\7cd4217b9eda4553df05677af7d232ee\transformed\transport-runtime-3.1.9\AndroidManifest.xml:28:13-37
+180            android:permission="android.permission.BIND_JOB_SERVICE" >
+180-->[com.google.android.datatransport:transport-runtime:3.1.9] C:\Users\g.dimaio\.gradle\caches\transforms-4\7cd4217b9eda4553df05677af7d232ee\transformed\transport-runtime-3.1.9\AndroidManifest.xml:29:13-69
+181        </service>
+182
+183        <receiver
+183-->[com.google.android.datatransport:transport-runtime:3.1.9] C:\Users\g.dimaio\.gradle\caches\transforms-4\7cd4217b9eda4553df05677af7d232ee\transformed\transport-runtime-3.1.9\AndroidManifest.xml:32:9-34:40
+184            android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.AlarmManagerSchedulerBroadcastReceiver"
+184-->[com.google.android.datatransport:transport-runtime:3.1.9] C:\Users\g.dimaio\.gradle\caches\transforms-4\7cd4217b9eda4553df05677af7d232ee\transformed\transport-runtime-3.1.9\AndroidManifest.xml:33:13-132
+185            android:exported="false" />
+185-->[com.google.android.datatransport:transport-runtime:3.1.9] C:\Users\g.dimaio\.gradle\caches\transforms-4\7cd4217b9eda4553df05677af7d232ee\transformed\transport-runtime-3.1.9\AndroidManifest.xml:34:13-37
+186    </application>
+187
+188</manifest>

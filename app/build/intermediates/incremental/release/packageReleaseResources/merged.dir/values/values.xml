@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="white">#FFFFFFFF</color>
+    <string name="app_name">Peekly Parent</string>
+    <string name="gcm_defaultSenderId" translatable="false">309937591984</string>
+    <string name="google_api_key" translatable="false">AIzaSyAixaDbzc0CSSDpKvuIIEC3ZOj8gctBA48</string>
+    <string name="google_app_id" translatable="false">1:309937591984:android:ec077c02c698b28e614d75</string>
+    <string name="google_crash_reporting_api_key" translatable="false">AIzaSyAixaDbzc0CSSDpKvuIIEC3ZOj8gctBA48</string>
+    <string name="google_storage_bucket" translatable="false">peekly-notification-app.firebasestorage.app</string>
+    <string name="project_id" translatable="false">peekly-notification-app</string>
+    <style name="Theme.PeeklyParent" parent="android:Theme.Material.Light.NoActionBar"/>
+</resources>

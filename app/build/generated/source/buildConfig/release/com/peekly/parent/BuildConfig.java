@@ -1,0 +1,14 @@
+/**
+ * Automatically generated file. DO NOT MODIFY
+ */
+package com.peekly.parent;
+
+public final class BuildConfig {
+  public static final boolean DEBUG = false;
+  public static final String APPLICATION_ID = "com.peekly.parent";
+  public static final String BUILD_TYPE = "release";
+  public static final int VERSION_CODE = 1;
+  public static final String VERSION_NAME = "1.0";
+  // Field from default config.
+  public static final String BACKEND_URL = "http://10.0.2.2:8080/api/";
+}
