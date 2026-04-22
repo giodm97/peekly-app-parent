@@ -66,6 +66,8 @@ jobs:
 
             claude --dangerously-skip-permissions -p "$(cat /tmp/claude_prompt.txt)"
 
+            git config --unset http.proxy 2>/dev/null || true
+            git config --unset https.proxy 2>/dev/null || true
             git remote set-url origin "https://x-access-token:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git"
 
             if git diff --cached --quiet && git diff --quiet; then
