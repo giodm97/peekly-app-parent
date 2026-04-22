@@ -32,11 +32,14 @@ jobs:
         run: |
           git config user.name "Peekly Bot"
           git config user.email "dimaio.giuseppe@outlook.com"
+          git remote set-url origin "https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git"
 
       - name: Implement pending issues
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_REPOSITORY: ${{ github.repository }}
         run: |
           for issue_file in issues/*.md; do
             status=$(grep '^status:' "$issue_file" | awk '{print $2}')
@@ -62,6 +65,8 @@ jobs:
             } > /tmp/claude_prompt.txt
 
             claude --dangerously-skip-permissions -p "$(cat /tmp/claude_prompt.txt)"
+
+            git remote set-url origin "https://x-access-token:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git"
 
             if git diff --cached --quiet && git diff --quiet; then
               echo "No changes produced — skipping $title"
